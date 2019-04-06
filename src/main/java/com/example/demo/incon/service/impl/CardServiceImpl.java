@@ -6,6 +6,7 @@ import com.example.demo.incon.service.CardService;
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -18,6 +19,7 @@ import java.util.List;
  * @since 2019-04-05
  */
 @Service
+@Transactional(rollbackFor = Exception.class)
 public class CardServiceImpl extends ServiceImpl<CardDao, Card> implements CardService {
 
     @Autowired

@@ -55,6 +55,7 @@ public class CodeGenerator {
         gc.setServiceName("%sService");
         gc.setServiceImplName("%sServiceImpl");
         gc.setControllerName("%sController");
+        //gc.setActiveRecord(true);
         mpg.setGlobalConfig(gc);
 
         // 数据源配置
