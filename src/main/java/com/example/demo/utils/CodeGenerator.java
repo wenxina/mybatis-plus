@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.exceptions.MybatisPlusException;
 import com.baomidou.mybatisplus.generator.AutoGenerator;
 import com.baomidou.mybatisplus.generator.InjectionConfig;
 import com.baomidou.mybatisplus.generator.config.*;
+import com.baomidou.mybatisplus.generator.config.rules.DbType;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
 import com.baomidou.mybatisplus.generator.engine.VelocityTemplateEngine;
@@ -59,12 +60,21 @@ public class CodeGenerator {
         mpg.setGlobalConfig(gc);
 
         // 数据源配置
-        DataSourceConfig dsc = new DataSourceConfig();
+        /*DataSourceConfig dsc = new DataSourceConfig();
         dsc.setUrl("jdbc:mysql://localhost:3306/test?useUnicode=true&useSSL=false&characterEncoding=utf8");
         // dsc.setSchemaName("public");
         dsc.setDriverName("com.mysql.jdbc.Driver");
         dsc.setUsername("root");
         dsc.setPassword("123456");
+        mpg.setDataSource(dsc);*/
+
+        DataSourceConfig dsc = new DataSourceConfig();
+        dsc.setDbType(DbType.ORACLE);//设置oracle
+        dsc.setUrl("jdbc:oracle:thin:@202.115.35.4:1521:db");
+        // dsc.setSchemaName("public");
+        dsc.setDriverName("oracle.jdbc.OracleDriver");
+        dsc.setUsername("scdx_cxcy");
+        dsc.setPassword("scdx_cxcy_incons");
         mpg.setDataSource(dsc);
 
         // 包配置

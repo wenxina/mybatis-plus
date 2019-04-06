@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.test.mapper.JcYxbDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.demo.test.entity.JcYxb">
+        <id column="YXID" property="yxid"/>
+        <result column="YXMC" property="yxmc"/>
+        <result column="SJYX" property="sjyx"/>
+        <result column="SSXQ" property="ssxq"/>
+        <result column="SFKY" property="sfky"/>
+        <result column="BZ" property="bz"/>
+        <result column="YXDM" property="yxdm"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        YXID AS yxid, YXMC AS yxmc, SJYX AS sjyx, SSXQ AS ssxq, SFKY AS sfky, BZ AS bz, YXDM AS yxdm
+    </sql>
+
+</mapper>
