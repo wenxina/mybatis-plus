@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.incon.mapper.CardDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.demo.incon.entity.Card">
+        <id column="cardId" property="cardId" />
+        <result column="cardName" property="cardName" />
+        <result column="cardAge" property="cardAge" />
+        <result column="cardHobby" property="cardHobby" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        cardId, cardName, cardAge, cardHobby
+    </sql>
+    <select id="selectAll" resultType="com.example.demo.incon.entity.Card">
+        SELECT * FROM card
+    </select>
+
+</mapper>
